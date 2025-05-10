@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Ask for exam name if not provided
+  condition:
+  - slot_was_set:
+    - exam_name: null
+  steps:
+  - intent: ask_exam_info
+  - action: utter_ask_exam_info
+
+- rule: Respond to exam info requests when exam_name is provided
+  condition:
+  - slot_was_set:
+    - exam_name: true # This means the slot has some value
+  steps:
+  - intent: ask_exam_info # Or a more general intent if exam_name is the main info
+  - action: utter_got_exam_name
+
+- rule: Respond to exam format requests when exam_name is provided
+  condition:
+  - slot_was_set:
+    - exam_name: true
+  steps:
+  - intent: ask_exam_format
+  - action: utter_ask_exam_format
+
+- rule: Respond to exam scheduling requests when exam_name is provided
+  condition:
+  - slot_was_set:
+    - exam_name: true
+  steps:
+  - intent: ask_exam_scheduling
+  - action: utter_ask_exam_scheduling
+
+- rule: Respond to test centre info requests
+  steps:
+  - intent: ask_test_centre_info
+  - action: utter_ask_test_centre_info

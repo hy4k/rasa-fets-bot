@@ -1,0 +1,72 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_exam_info
+  - ask_exam_format
+  - ask_exam_scheduling
+  - ask_test_centre_info
+
+entities:
+  - exam_name
+  - location
+
+slots:
+  exam_name:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: exam_name
+  location:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: location
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_exam_info:
+  - text: "I can help with that. Which exam are you interested in?"
+
+  utter_got_exam_name:
+  - text: "Okay, you're interested in {exam_name}. Let me tell you about it."
+
+  utter_ask_exam_format:
+  - text: "I can tell you about the format of {exam_name}. It generally includes..."
+
+  utter_ask_exam_scheduling:
+  - text: "For {exam_name} scheduling, you would typically need to visit the official exam body's website or our booking portal. Would you like a general guide?"
+
+  utter_ask_test_centre_info:
+  - text: "Looking for test centers for {exam_name} in {location}? Let me check that for you."
+  - text: "I can help find test centers. Are you looking for a specific exam like {exam_name} or a location like {location}?"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

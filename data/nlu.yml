@@ -1,0 +1,164 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_exam_info
+  examples: |
+    - tell me about the [IELTS exam](exam_name)
+    - what is [CMA US](exam_name)?
+    - can you give me information on the [GRE](exam_name)?
+    - I want to know more about [ACCA](exam_name)
+    - details for [TOEFL](exam_name)
+    - what exams do you offer?
+    - tell me about [MRCS](exam_name)
+    - info on [AWS certification](exam_name)
+    - what is the [pearson vue test](exam_name)?
+    - explain [prometric exams](exam_name)
+    - what about [PSI](exam_name)?
+    - I'm interested in [IELTS](exam_name)
+    - [GRE](exam_name)
+    - How about [ACCA](exam_name)?
+    - [CMA US](exam_name) please
+    - Can you tell me about [Microsoft certifications](exam_name)?
+    - What different types of tests are available?
+    - List all exams
+    - I need info about [IELTS General](exam_name:IELTS)
+    - Tell me about [IELTS Academic](exam_name:IELTS)
+    - More details on the [AWS Cloud Practitioner](exam_name:AWS certification)
+    - Is there info on [ACCA Financial Accounting](exam_name:ACCA)?
+- intent: ask_exam_format
+  examples: |
+    - what is the format of the [GRE](exam_name)?
+    - how many sections in [IELTS](exam_name)?
+    - tell me about the structure of the [TOEFL](exam_name)
+    - what types of questions are on the [ACCA](exam_name) exam?
+    - [CMA US](exam_name) exam format
+    - exam structure for [MRCS](exam_name)
+    - can you describe the [AWS certification](exam_name) format?
+    - what's the [pearson vue test](exam_name) like?
+    - how is the [prometric exam](exam_name) structured?
+    - [PSI](exam_name) test format
+    - what is the duration of the [GRE](exam_name)?
+    - how long is the [IELTS](exam_name) speaking test?
+- intent: ask_exam_scheduling
+  examples: |
+    - how do I book my [ACCA](exam_name) exam?
+    - when can I schedule the [MRCS](exam_name)?
+    - what are the available dates for [GRE](exam_name)?
+    - I want to schedule [TOEFL](exam_name)
+    - booking for [CMA US](exam_name)
+    - how to register for [IELTS](exam_name)
+    - can I book an [AWS certification](exam_name) test now?
+    - find slots for [pearson vue test](exam_name)
+    - [prometric exam](exam_name) scheduling
+    - [PSI](exam_name) test booking
+    - how do I get a test date?
+    - what's the process to schedule an exam?
+- intent: ask_test_centre_info
+  examples: |
+    - where is the [pearson vue test](exam_name) centre in [Calicut](location)?
+    - do you have [prometric](exam_name) centers in [Kochi](location)?
+    - test centre locations
+    - find a [PSI](exam_name) test center near me
+    - are there any [IELTS](exam_name) test locations in [Kerala](location)?
+    - [ACCA](exam_name) exam centers
+    - where can I take the [GRE](exam_name) in [Mumbai](location)?
+    - list of test centers for [TOEFL](exam_name)
+    - any [CMA US](exam_name) centers around [Delhi](location)?
+    - test facilities
+    - show me testing locations
+    - are there test centers in [Bangalore](location)?
+    - I need a test center in [Chennai](location) for [AWS certification](exam_name)
+    - [Pune](location) testing centers
+    - where are the [prometric](exam_name) facilities?
+    - find [IELTS](exam_name) center [Hyderabad](location)
+    - any [ETS](exam_name) authorized centers in [NCR](location)?
+    - looking for a place to take my [Microsoft exam](exam_name) in [Gurgaon](location)
